@@ -1,16 +1,14 @@
 package com.movie.review.model;
-
-
 public class MovieReview {
 
 	private int id;
-	
+
 	private String movieName;
-	
+
 	private String movieSummary;
-	
+
 	private float rating;
-	
+
 	private String review;
 
 	public int getId() {
@@ -65,6 +63,6 @@ public class MovieReview {
 	public MovieReview() {
 		super();
 	}
-	
+
 
 }

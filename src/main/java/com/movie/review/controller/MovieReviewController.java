@@ -18,24 +18,24 @@ public class MovieReviewController {
 
 	@Autowired()
 	MovieRepository movieRepo;
-	
-	
+
+
 	@GetMapping(path = "/test", produces = "application/json")
 	public String findAll(){
 		return "SUCCESS";
 	}
-	
+
 	@GetMapping(path = "/all", produces = "application/json")
 	public List<MovieReview> getAll(){
 		return movieRepo.getAllData();
 	}
-	
+
 	@PostMapping(path = "/review", produces = "application/json")
 	public MovieReview createReview(@RequestBody MovieReview movieReview){
 		return movieRepo.create(movieReview);
 	}
-	
-	
 
-	
+
+
+
 }

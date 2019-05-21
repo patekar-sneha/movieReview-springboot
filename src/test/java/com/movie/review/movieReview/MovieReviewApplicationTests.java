@@ -1,4 +1,4 @@
-package com.movie.review.movieReview;
+/*package com.movie.review.movieReview;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,3 +14,4 @@ public class MovieReviewApplicationTests {
 	}
 
 }
+*/
