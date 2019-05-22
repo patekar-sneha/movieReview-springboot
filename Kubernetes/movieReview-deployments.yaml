@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: movieReview
+  name: moviereview
 spec:
   # minReadySeconds: 30
   selector:
