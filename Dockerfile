@@ -1,4 +1,5 @@
-FROM openjdk:8
-ADD target/users-mysql.jar users-mysql.jar
+FROM openjdk:8u131-jdk-alpine
+WORKDIR /spring
+COPY . /spring
 EXPOSE 8086
-ENTRYPOINT ["java", "-jar", "users-mysql.jar"]
+ENTRYPOINT ["java", "-jar", "/spring/target/movieReview-0.0.1-SNAPSHOT.jar"]
