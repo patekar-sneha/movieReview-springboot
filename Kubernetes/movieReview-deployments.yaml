@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movieReview
+spec:
+  # minReadySeconds: 30
+  selector:
+    matchLabels:
+      app: movieReview
+  replicas: 2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: movieReview
+    spec:
+      containers:
+      - name: webapp
+        image: gcr.io/spring-kube/movie-review
