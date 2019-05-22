@@ -7,15 +7,26 @@ docker container run --name mysql-standalone -e MYSQL_ROOT_PASSWORD=password -e 
 Go in docker container and check--> docker container exec -it mysql-standalone bash
 After enetering bash login via username and password
 --> mysql -uroot -ppassword
+gcloud auth configure-docker
 
 
 In the Spring Boot Application, use the same container name of the mysql instance in the application.properties spring.datasource.url = jdbc:mysql://mysql-standalone:3306/test
 
-Create a Dockerfile for creating a docker image from the Spring Boot Application FROM openjdk:8 ADD target/users-mysql.jar users-mysql.jar EXPOSE 8086 ENTRYPOINT ["java", "-jar", "users-mysql.jar"]
+DOCKER BUILD COMMAND:
 
-Using the Dockerfile create the Docker image. From the directory of Dockerfile - docker build . -t users-mysql
+docker build -t movie-review .
 
-Run the Docker image (users-mysql) created in #4. docker build . -t users-mysql
+gcloud auth:
+gcloud auth configure-docker
+
+DOCKER GOOGLE CLOUD:
+docker tag movie-review gcr.io/spring-kube/movie-review 
+
+DOCKER PUSH TO GOOGLE CLOUD:
+docker push gcr.io/spring-kube/movie-review
+
+
+
 
 Useful Docker commands
 docker images
