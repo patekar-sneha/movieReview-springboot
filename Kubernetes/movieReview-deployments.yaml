@@ -6,13 +6,13 @@ spec:
   # minReadySeconds: 30
   selector:
     matchLabels:
-      app: movieReview
+      app: moviereview
   replicas: 2
   template: # template for the pods
     metadata:
       labels:
-        app: movieReview
+        app: moviereview
     spec:
       containers:
-      - name: webapp
+      - name: moviereview
         image: gcr.io/spring-kube/movie-review
