@@ -34,3 +34,17 @@ docker container ls
 docker logs <container_name>
 docker container rm <container_name
 docker image rm <image_name
+
+KUBERNETES:
+
+    MYSQL:
+    1. kubectl apply -f mysql-volumeclaim.yaml
+    2. SET PASSWORD: kubectl create secret generic mysql --from-literal=password=password 
+    3. kubectl create -f mysql-new.yaml
+    4. kubectl create -f mysql-new-service.yaml
+    4. ACCESS MYSQL THROUGH GKE: kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
+
+
+
+
+
