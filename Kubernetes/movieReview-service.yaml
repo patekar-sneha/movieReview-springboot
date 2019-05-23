@@ -4,15 +4,14 @@ metadata:
   name: moviereviewservice
 
 spec:
-  # This defines which pods are going to be represented by this Service
-  # The service becomes a network endpoint for either other services
-  # or maybe external users to connect to (eg browser)
   selector:
     app: moviereview
+    # give this when there is pods and service for selector and labels --
+    #release: 0
+
 
   ports:
-    - name: http
-      port: 8086
-      nodePort: 30012
-
+  - name: http
+    port: 8086
+# if you are running on any cloud provider remove the nodePort and change type as LoadBalancer
   type: LoadBalancer
