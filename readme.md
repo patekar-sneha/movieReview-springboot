@@ -44,7 +44,15 @@ KUBERNETES:
     4. kubectl create -f mysql-new-service.yaml
     4. ACCESS MYSQL THROUGH GKE: kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
 
+ENTER DB: kubectl exec -it mysql-5b9b49cf46-pl7cv -- mysql -uroot -ppassword
 
-
-
+CREATE TABLE:
+CREATE TABLE `movie_review` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`movieName` VARCHAR(100),
+	`movieSummary` VARCHAR(100),
+	`rating` INT,
+	`review` VARCHAR(200),
+	PRIMARY KEY (`id`)
+);
 
