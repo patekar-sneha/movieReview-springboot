@@ -25,7 +25,7 @@ docker tag movie-review gcr.io/spring-kube/movie-review
 DOCKER PUSH TO GOOGLE CLOUD:
 docker push gcr.io/spring-kube/movie-review
 
-
+DELETE IMAGE FROM GCE: gcloud container images delete gcr.io/spring-kube/movie-review
 
 
 Useful Docker commands
