@@ -25,12 +25,12 @@ public class MovieRepository {
 	public List<MovieReview> getAllData() {
 		List<String> movieData = new ArrayList<>();
 		//movieData.add(jdbcTemplate.queryForList("select * from movie.movie_review;", new MovieRepo()));
-		 return jdbcTemplate.query("select * from movie.movie_review;", new MovieRepo());
+		 return jdbcTemplate.query("select * from mysql.movie_review;", new MovieRepo());
     }
 	
 	  public MovieReview create(final MovieReview movieReview) 
 	    {
-	        final String sql = "insert into movie.movie_review(id, movieName, movieSummary, rating, review) values(?,?,?,?,?)";
+	        final String sql = "insert into mysql.movie_review(id, movieName, movieSummary, rating, review) values(?,?,?,?,?)";
 
 	        KeyHolder holder = new GeneratedKeyHolder();
 	        jdbcTemplate.update(new PreparedStatementCreator() {
