@@ -56,3 +56,6 @@ CREATE TABLE `movie_review` (
 	PRIMARY KEY (`id`)
 );
 
+
+https://medium.com/javarevisited/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f 
+EXPOSE TO OUTSIDE WORLD:kubectl expose deployment userapi --type=LoadBalancer --port 80 --target-port 8080
