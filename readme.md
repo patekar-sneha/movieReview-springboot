@@ -59,3 +59,27 @@ CREATE TABLE `movie_review` (
 
 https://medium.com/javarevisited/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f 
 EXPOSE TO OUTSIDE WORLD:kubectl expose deployment userapi --type=LoadBalancer --port 80 --target-port 8080
+
+CREATE NAMESPACE IN KUBERNETES:
+
+kubectl get namespaces --show-labels
+
+kubectl config current-context
+
+kubectl config set-context dev --namespace=dev \
+  --cluster=gke_spring-kube_us-central1-a_final-hopeso \
+  --user=gke_spring-kube_us-central1-a_final-hopeso
+
+kubectl config use-context dev
+
+kubectl config current-context
+
+
+
+
+
+
+
+
+
+
