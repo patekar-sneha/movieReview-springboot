@@ -47,7 +47,7 @@ KUBERNETES:
 ENTER DB: kubectl exec -it mysql-5b9b49cf46-pl7cv -- mysql -uroot -ppassword
 
 CREATE TABLE:
-CREATE TABLE `movie_review` (
+CREATE TABLE Movie.movie_review(
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`movieName` VARCHAR(100),
 	`movieSummary` VARCHAR(100),
@@ -56,6 +56,7 @@ CREATE TABLE `movie_review` (
 	PRIMARY KEY (`id`)
 );
 
+INSERT INTO Movie.movie_review(id,movieName,movieSummary,rating,review) VALUES (1, 'ABC', 'Good', 5, 'Great');
 
 https://medium.com/javarevisited/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f 
 EXPOSE TO OUTSIDE WORLD:kubectl expose deployment userapi --type=LoadBalancer --port 80 --target-port 8080
