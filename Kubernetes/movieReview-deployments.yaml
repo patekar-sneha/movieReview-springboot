@@ -2,16 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: moviereview
+  namespace: dev
 spec:
   # minReadySeconds: 30
   selector:
     matchLabels:
       app: moviereview
+      environment: dev
   replicas: 2
   template: # template for the pods
     metadata:
       labels:
         app: moviereview
+        environment: dev
     spec:
       containers:
       - name: moviereview
