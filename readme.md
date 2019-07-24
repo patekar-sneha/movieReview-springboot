@@ -45,6 +45,7 @@ KUBERNETES:
     4. ACCESS MYSQL THROUGH GKE: kubectl run -it --rm --image=mysql:5.6 --restart=Never mysql-client -- mysql -h mysql -ppassword
 
 ENTER DB: kubectl exec -it mysql-5b9b49cf46-pl7cv -- mysql -uroot -ppassword
+Create database Movie;
 
 CREATE TABLE:
 CREATE TABLE Movie.movie_review(
